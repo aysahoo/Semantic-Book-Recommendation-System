@@ -1,0 +1,10 @@
+services:
+  jupyter:
+    build: .
+    container_name: semantic-book-jupyter
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - "8889:8888"
