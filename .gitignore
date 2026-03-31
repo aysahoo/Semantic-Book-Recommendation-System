@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Large data files (download via notebooks)
+*.csv
+*.npy
+*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
