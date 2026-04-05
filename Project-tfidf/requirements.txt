@@ -1,0 +1,6 @@
+pandas
+numpy
+scikit-learn
+nltk
+spacy==3.8.11
+gradio
