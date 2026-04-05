@@ -286,11 +286,11 @@ tones = ["All"] + ["Happy", "Surprising", "Angry", "Suspenseful", "Sad"]
 css = """
 .book-gallery .gallery-item > div { aspect-ratio: 2/3 !important; }
 .book-gallery .gallery-item img { object-fit: contain !important; border-radius: 6px; background: #f5f5f5; }
+footer { display: none !important; }
 """
 
 with gr.Blocks(theme=gr.themes.Soft(), css=css) as dashboard:
     gr.Markdown("# Semantic Book Recommendation System")
-    gr.Markdown("*Powered by Hybrid Search: Sentence Transformers (70%) + TF-IDF (30%) — Fully Offline, No API Required*")
 
     with gr.Tabs():
 
@@ -351,4 +351,4 @@ with gr.Blocks(theme=gr.themes.Soft(), css=css) as dashboard:
             nlp_button.click(fn=analyze_text, inputs=[nlp_input], outputs=[nlp_output])
 
 if __name__ == "__main__":
-    dashboard.launch()
+    dashboard.launch(show_api=False)
